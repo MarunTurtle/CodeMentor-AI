@@ -100,9 +100,15 @@ def fetch_complete_problem_data(prob_n):
         response_acm_icpc.raise_for_status()  # This will throw an error if the call fails
 
         soup = BeautifulSoup(response_acm_icpc.content, 'html.parser')
-        problem_text = soup.select_one('#description .problem-text p').text.strip()
-        input_text = soup.select_one('#input .problem-text p').text.replace('\xa0', ' ').strip()
-        output_text = soup.select_one('#output .problem-text p').text.replace('\xa0', ' ').strip()
+        
+        problem_description_div = soup.select_one('#problem_description')
+        problem_text = "\n".join([p.text.strip() for p in problem_description_div.find_all('p')])
+
+        problem_input_div = soup.select_one('#problem_input')
+        input_text = "\n".join([p.text.strip() for p in problem_input_div.find_all('p')])
+        
+        problem_output_div = soup.select_one('#problem_output')
+        output_text = "\n".join([p.text.strip() for p in problem_output_div.find_all('p')])
 
         list_sampleinput_text = []
         list_sampleoutput_text = []

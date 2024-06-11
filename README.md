@@ -55,31 +55,31 @@
 
 다음은 키를 추가한 후 `keys.py` 파일의 예시임:
 
-\`\`\`python
+```python
 openai = 'your_openai_api_key'
 token = 'your_notion_integration_token'
 page_id = 'your_notion_page_id'
-\`\`\`
+```
 
 ### 설치 및 설정:
 CodeMentor AI를 설정하고 실행하려면 다음 단계를 따르세요:
 
 1. **리포지토리 클론:**
-   \`\`\`bash
+   ```bash
    git clone [GitHub Repository URL]
-   \`\`\`
+   ```
 2. **프로젝트 디렉토리로 이동:**
-   \`\`\`bash
+   ```bash
    cd CodeMentor_AI
-   \`\`\`
+   ```
 3. **필요한 종속성 설치:**
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 4. **응용 프로그램 실행:**
-   \`\`\`bash
+   ```bash
    python main.py
-   \`\`\`
+   ```
 
 ### 상세 설명:
 #### 기능 개요:
